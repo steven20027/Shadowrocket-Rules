@@ -5,6 +5,8 @@
 # 小火箭 Shadowrocket Config
 
 一份开箱即用的 小火箭 Shadowrocket 规则配置
+
+> Fork 改动（2026-11-12）：新增 🇸🇬 新加坡节点分组，仅作可选项，默认策略不变；新加坡 / 日本 / 美国分组正则补数据中心缩写（新加坡 SIN/SGP、日本 TYO/NRT/OSA/KIX/HND/FUK、美国 LAX/SFO/SJC/SEA/PDX/DEN/DFW/IAH/ATL/ORD/JFK/EWR/MIA/PHX/LAS/NYC）。
 - 支持前沿的苹果智能（Apple Intelligence）
 - 在新规下的香港券商访问
 - 导入后添加自己的节点或订阅即可使用
@@ -12,7 +14,7 @@
 ## 快速开始
 
 1. 复制配置文件的 Raw 链接：
-   `https://raw.githubusercontent.com/LingJingMaster/Shadowrocket-Rules/refs/heads/main/Shadowrocket.conf`
+   `https://raw.githubusercontent.com/steven20027/Shadowrocket-Rules/refs/heads/main/Shadowrocket.conf`
 2. 打开 Shadowrocket → 配置 → 右上角 `+` → 粘贴链接 → 下载
 3. 点击已下载的配置，设为使用中（✔️）
 4. 首页添加你自己的节点或订阅
@@ -28,8 +30,8 @@
 |--------|------|----------|
 | 1 | 🧱 DNS 防泄露（HTTPDNS） | REJECT |
 | 2 | 📧 邮件服务（IMAP / POP3 / SMTP） | PROXY，可切换 DIRECT 或地区节点 |
-| 3 | 🔍 谷歌服务（含 Gemini） | 日本节点，可手动切香港节点 |
-| 4 | 🤖 AI 服务（ChatGPT、Claude、苹果智能等） | 美国节点 |
+| 3 | 🔍 谷歌服务（含 Gemini） | 日本节点，可手动切香港 / 新加坡节点 |
+| 4 | 🤖 AI 服务（ChatGPT、Claude、苹果智能等） | 美国节点，可手动切新加坡节点 |
 | 5 | 📹 油管视频（含 YouTube 翻译 API） | 节点选择 |
 | 6 | 🔒 哔哩哔哩 | DIRECT |
 | 7 | 🏠 私有网络 / 局域网 | DIRECT |
@@ -52,16 +54,16 @@
 | 服务 | 默认策略 | 可选策略 |
 |------|----------|----------|
 | 🧱 DNS 防泄露 | REJECT | 节点选择、DIRECT |
-| 📧 邮件服务 | PROXY | DIRECT、节点选择、日本节点、香港节点 |
-| 🔍 谷歌服务 | 🇯🇵 日本节点 | 🇭🇰 香港节点、节点选择、PROXY、DIRECT |
-| 🤖 AI 服务 | 🇺🇸 美国节点 | 节点选择、PROXY、DIRECT |
+| 📧 邮件服务 | PROXY | DIRECT、节点选择、日本节点、香港节点、新加坡节点 |
+| 🔍 谷歌服务 | 🇯🇵 日本节点 | 🇭🇰 香港节点、🇸🇬 新加坡节点、节点选择、PROXY、DIRECT |
+| 🤖 AI 服务 | 🇺🇸 美国节点 | 🇸🇬 新加坡节点、节点选择、PROXY、DIRECT |
 | 🍎 苹果推送 | 🚀 节点选择 | PROXY、DIRECT |
 | 🍏 苹果服务 | DIRECT | 节点选择、PROXY |
 | 🏦 汇丰香港 | DIRECT | 🇭🇰 香港节点、节点选择、PROXY |
 | 🏦 香港银行 | DIRECT | 香港节点、节点选择、PROXY |
 | 📈 券商服务 | 🇭🇰 香港节点 | DIRECT、节点选择、PROXY |
-| 🌍 非中国 | PROXY | 节点选择、DIRECT、日本节点 |
-| 🐟 漏网之鱼 | PROXY | 节点选择、DIRECT、日本节点 |
+| 🌍 非中国 | PROXY | 节点选择、DIRECT、日本节点、新加坡节点 |
+| 🐟 漏网之鱼 | PROXY | 节点选择、DIRECT、日本节点、新加坡节点 |
 
 
 
